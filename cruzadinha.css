@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.titulo {
+    height: 45px;
+    margin-left: 8.5rem;
+    position: absolute;
+    margin-top: 2rem;
+    font-weight: 600;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    text-shadow: 
+            0px 1px 10px rgb(0, 0, 0), 
+            0px 1px 10px rgb(0, 0, 0),                    
+            0px 1px 10px rgb(0, 0, 0),                  
+            0px 1px 10px rgb(0, 0, 0);
+    transition: all 300ms;
+}
+
+.titulo:hover {
+    text-shadow: none;
+}
+
+.tituloDicas {
+    position: absolute;
+    margin-top: 7rem;
+    margin-left: 3rem;
+    font-size: 22px;
+}
+
+.dica1 {
+    position: absolute;
+    margin-top: 7rem;
+    font-size: 20px;
+}
+
+.dica2 {
+    position: absolute;
+    margin-top: 7rem;
+    font-size: 20px;
+}
+
+.dica3 {
+    position: absolute;
+    margin-top: 7rem;
+    font-size: 20px;
+}
+
+.dica4 {
+    position: absolute;
+    margin-top: 7rem;
+    font-size: 20px;
+}
+
+.dica5 {
+    position: absolute;
+    margin-top: 7rem;
+    font-size: 20px;
+}
+
+.dica6 {
+    position: absolute;
+    margin-top: 7rem;
+    font-size: 20px;
+}
+
+.dica7 {
+    position: absolute;
+    margin-top: 7rem;
+    font-size: 20px;
+}
+
+.dica8 {
+    position: absolute;
+    margin-top: 7rem;
+    font-size: 20px;
+}
+
+.dica9 {
+    position: absolute;
+    margin-top: 7rem;
+    font-size: 20px;
+}
+
+.dica10 {
+    position: absolute;
+    margin-top: 7rem;
+    font-size: 20px;
+}
+
+.dica11 {
+    position: absolute;
+    margin-top: 7rem;
+    font-size: 20px;
+}
+
+.dica12 {
+    position: absolute;
+    margin-top: 7rem;
+    font-size: 20px;
+}
+
+.dica13 {
+    position: absolute;
+    margin-top: 7rem;
+    font-size: 20px;
+}
+
+.dica14 {
+    position: absolute;
+    margin-top: 7rem;
+    font-size: 20px;
+}
+
+.dica15 {
+    position: absolute;
+    margin-top: 7rem;
+    font-size: 20px;
+}
+
+.dica16 {
+    position: absolute;
+    margin-top: 7rem;
+    font-size: 20px;
+}
+
+.dica17 {
+    position: absolute;
+    margin-top: 7rem;
+    font-size: 20px;
+}
+
+.botoes {
+    position: absolute;
+    margin-left: 1.5rem;
+    margin-top: 37.8rem;
+}
+
+.botoes button {
+    border-radius: 20%;
+    border-style: solid;
+    border-color: rgba(2,0,36,1);
+    background: transparent;
+    box-shadow:  0px 0px 5px rgb(0, 0, 0);
+    transition: all 300ms;
+    cursor: pointer;
+    width: 30px;
+    font-family: 'Poppins', sans-serif;;
+}
+
+.botoes button:hover {
+    box-shadow: none;
+    background: white;
+    color: black;
+    font-weight: 800;
+}
+
+.gradiente {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(190deg, rgba(2,0,36,1) 0%, rgba(220,225,235,1) 70%);
+}
+
+.div_caixas {
+    display: flex;
+    margin-left: 35rem;
+    padding-top: 1rem;
+}
+
+.div_caixas input {
+    width: 25px;
+    height: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    border: 1.5px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 5px 4px 10px 0px black;
+}
+
+input:disabled {
+    background-color: rgb(194, 194, 194);
+    color: black;
+    font-weight: 1000;
+}
+
+.foo { 
+    writing-mode: vertical-rl; 
+    position: absolute;
+    margin-left: 78rem;
+    margin-top: 11rem;
+    text-align: center;
+    text-shadow:   5px 0px 12px rgb(0, 0, 0);
+    color: 	rgb(211,211,211);
+    font-size: 12px;
+    cursor:default;
+}

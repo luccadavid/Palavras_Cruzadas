@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palavras Cruzadas | Arq. Comp.</title>
+    <link rel="stylesheet" href="cruzadinha.css">
+    <link rel="shortcut icon" href="mente.png">
+</head>
+<body>
+    <div class="gradiente">
+        <div class="titulo">
+            Caça-Palavras
+        </div>
+        <div class="tituloDicas">
+            Clique em qual número você quer a dica!
+        <div id="idDica1" class="dica1" style="display: none;">
+            <b>1</b> - É uma unidade de processamento com dois núcleos. <br><b><u>DICA</b></u> (Ex: Processador Intel Pentium Gold G5420)
+        </div>
+        <div id="idDica2" class="dica2" style="display: none">
+            <b>2</b> - É responsável pelo processamento de todos os dados do computador, fazendo cálculos, operações lógicas e controlado os dados que entram e saem em cada procedimento que o computador realiza.
+        </div>
+        <div id="idDica3" class="dica3" style="display: none">
+            <b>3</b> - São circuitos digitais capazes de armazenar e deslocar informações binárias, e são tipicamente usados como um dispositivo de armazenamento temporário. São utilizados na execução de programas de computadores, disponibilizando um local para armazenar dados. <br><b><u>DICA</b></u> (estão no topo da hierarquia de memória)
+        </div>
+        <div id="idDica4" class="dica4" style="display: none">
+            <b>4</b> - Processador / Principais características: <br>
+            Início de fabricação: Dia 9 de Setembro de 2009 <br>
+            Número de núcleos: 6 <br>
+            número de threads: 12 <br>
+            Cache: 12MB <br>
+            Velocidade do barramento: 8 GT/s <br>
+            TDP: 65 W <br>
+        </div>
+        <div id="idDica5" class="dica5" style="display: none">
+            <b>5</b> - É o dispositivo em que através do interior de um computador são transportados dados e informações importantes.
+        </div>
+        <div id="idDica6" class="dica6" style="display: none">
+            <b>6</b> - É uma unidade de processamento com quatro núcleos. <br><b><u>DICA</b></u> (Ex: Processador Intel Core i3-10100F)
+        </div>
+        <div id="idDica7" class="dica7" style="display: none">
+            <b>7</b> - É onde os dados armazenados não são perdidos quando desligamos o equipamento, ao contrário da memória ram.
+        </div>
+        <div id="idDica8" class="dica8" style="display: none">
+            <b>8</b> - É um chip re-escrevível (regravável) que, ao contrário da memória RAM convencional, preserva o conteúdo sem a utilização de uma fonte de alimentação. <br><b><u>DICA</b></u> (É encontrada comumente em cartões de memória, flash drives USB (Pen-drives), MP3 Players, iPods, PDAs, câmeras digitais e celulares) 
+        </div>
+        <div id="idDica9" class="dica9" style="display: none">
+            <b>9</b> - É um recurso da placa mãe que capacita os periféricos a terem acesso direto à memória RAM, sem sobrecarregarem o processador.
+        </div>
+        <div id="idDica10" class="dica10" style="display: none">
+            <b>10</b> - Executa as principais operações lógicas e aritméticas do computador. Ela soma, subtrai, divide, determina se um número é positivo ou negativo ou se é zero.
+        </div>
+        <div id="idDica11" class="dica11"style="display: none">
+            <b>11</b> - Indica o local onde os processos devem ser extraídos e para onde devem ser enviados após o processamento.
+        </div>
+        <div id="idDica12" class="dica12" style="display: none">
+            <b>12</b> - Processador / Principais características: <br>
+            Início de fabricação: Dia 17 de novembro de 2008 <br>
+            Número de núcleos: 10 <br>
+            Número de threads: 12 <br>
+            Cache: 12MB <br>
+            Máxima frequência dinâmica da placa gráfica 1.25 GHz <br>
+        </div>
+        <div id="idDica13" class="dica13" style="display: none">
+            <b>13</b> - Um tipo de chip de memória de computador que mantém seus dados quando a energia é desligada.
+        </div>
+        <div id="idDica14" class="dica14" style="display: none">
+            <b>14</b> - É a memória volátil que armazena temporariamente os arquivos com os quais você está trabalhando. <br><b><u>DICA</b></u> (Está principalmente localizada no chip responsável pela iniciação do sistema) 
+        </div>
+        <div id="idDica15" class="dica15" style="display: none">
+            <b>15</b> - É responsável pelo armazenamento de informações necessárias para a execução de aplicativos em uso e para o funcionamento do próprio sistema operacional. <br><b><u>DICA</b></u> (Geralmente, o componente pode ser encontrado na parte de baixo do notebook) 
+        </div>
+        </div>
+        <div class="botoes">
+            <button onclick="div1()">1</button>
+            <button onclick="div2()">2</button>
+            <button onclick="div3()">3</button>
+            <button onclick="div4()">4</button>
+            <button onclick="div5()">5</button>
+            <button onclick="div6()">6</button>
+            <button onclick="div7()">7</button>
+            <button onclick="div8()">8</button>
+            <button onclick="div9()">9</button>
+            <button onclick="div10()">10</button>
+            <button onclick="div11()">11</button>
+            <button onclick="div12()">12</button>
+            <button onclick="div13()">13</button>
+            <button onclick="div14()">14</button>
+            <button onclick="div15()">15</button>
+        </div>
+        <div class="foo">
+            Site feito por<br>
+            David Lucca, Fernando Mortaia e Lucas Xavier
+            </div>
+        <div class="container">
+            <div class="div_caixas">
+        <table>
+            <!-- 1ª Linha -->
+            <tr>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" class="input_on" placeholder="1" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled ></td>
+            </tr>
+            <!-- 2ª Linha -->
+            <tr>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="palavra_15" class="input_on" placeholder="15" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="palavra_2" class="input_on" placeholder="2" disabled></td>
+                <td><input type="text" id="letra_14" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_15" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_16" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled ></td>
+            </tr>
+            <!-- 3ª Linha -->
+            <tr>
+                <td><input type="text" id="palavra_3" class="input_on" placeholder="3" disabled></td>
+                <td><input type="text" id="letra_2" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_3" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_4" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_5" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_6" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_7" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_8" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_9" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_10" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_11" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_12" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_13" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_14" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled ></td>
+                <td><input type="text" id="letra_16" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled ></td>
+                <td><input class="" disabled></td>
+            </tr>
+            <!-- 4ª Linha -->
+            <tr>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="palavra_7" class="input_on" placeholder="7" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_3" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input  type="text" id="palavra_5" class="input_on" placeholder="5" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled ></td>
+            </tr>
+            <!-- 5ª Linha -->
+            <tr>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled ></td>
+            </tr>
+            <!-- 6ª Linha -->
+            <tr>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="palavra_6" class="input_on" placeholder="6" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+            </tr>
+            <!-- 7ª Linha -->
+            <tr>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="palavra_8" class="input_on" placeholder="8" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+            </tr>
+            <!-- 8ª Linha -->
+            <tr>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="palavra_9" class="input_on" placeholder="9" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+            </tr>
+            <!-- 9ª Linha -->
+            <tr>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled ></td>
+            </tr>
+            <!-- 10ª Linha -->
+            <tr>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input  type="text" id="palavra_10" class="input_on" placeholder="10" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled ></td>
+            </tr>
+            <!-- 11ª Linha -->
+            <tr>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input  type="text" id="palavra_11" class="input_on" placeholder="11" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled ></td>
+            </tr>
+            <!-- 12ª Linha -->
+            <tr>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="palavra_14" placeholder="14" class="input_on" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled ></td>
+            </tr>
+            <!-- 13ª Linha -->
+            <tr>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="palavra_13" placeholder="13" class="input_on" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="palavra_4" class="input_on" placeholder="4" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled ></td>
+            </tr>
+            <!-- 14ª Linha -->
+            <tr>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="palavra_12" class="input_on" placeholder="12" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled ></td>
+            </tr>
+            <!-- 15ª Linha -->
+            <tr>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled ></td>
+            </tr>
+            <!-- 16ª Linha -->
+            <tr>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled ></td>
+            </tr>
+            <!-- 17ª Linha -->
+            <tr>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled ></td>
+            </tr>
+            <!-- 18ª Linha -->
+            <tr>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input type="text" id="letra_18" maxlength="1" onkeyup="verifica(0)"></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+                <td><input class="" disabled></td>
+            </tr>
+    </div>
+</div>
+</div>
+    
+</body>
+</html>
+<script>
+    function div1(){
+        idDica1.style.display = "block";
+        idDica2.style.display = "none";
+        idDica3.style.display = "none";
+        idDica4.style.display = "none";
+        idDica5.style.display = "none";
+        idDica6.style.display = "none";
+        idDica7.style.display = "none";
+        idDica8.style.display = "none";
+        idDica9.style.display = "none";
+        idDica10.style.display = "none";
+        idDica11.style.display = "none";
+        idDica12.style.display = "none";
+        idDica13.style.display = "none";
+        idDica14.style.display = "none";
+        idDica15.style.display = "none";
+        idDica16.style.display = "none";
+        idDica17.style.display = "none";
+    }
+    function div2(){
+        idDica2.style.display = "block";
+        idDica1.style.display = "none";
+        idDica3.style.display = "none";
+        idDica4.style.display = "none";
+        idDica5.style.display = "none";
+        idDica6.style.display = "none";
+        idDica7.style.display = "none";
+        idDica8.style.display = "none";
+        idDica9.style.display = "none";
+        idDica10.style.display = "none";
+        idDica11.style.display = "none";
+        idDica12.style.display = "none";
+        idDica13.style.display = "none";
+        idDica14.style.display = "none";
+        idDica15.style.display = "none";
+        idDica16.style.display = "none";
+        idDica17.style.display = "none";
+    }
+    function div3(){
+        idDica3.style.display = "block";
+        idDica1.style.display = "none";
+        idDica2.style.display = "none";
+        idDica4.style.display = "none";
+        idDica5.style.display = "none";
+        idDica6.style.display = "none";
+        idDica7.style.display = "none";
+        idDica8.style.display = "none";
+        idDica9.style.display = "none";
+        idDica10.style.display = "none";
+        idDica11.style.display = "none";
+        idDica12.style.display = "none";
+        idDica13.style.display = "none";
+        idDica14.style.display = "none";
+        idDica15.style.display = "none";
+        idDica16.style.display = "none";
+        idDica17.style.display = "none";
+    }
+    function div4(){
+        idDica4.style.display = "block";
+        idDica1.style.display = "none";
+        idDica3.style.display = "none";
+        idDica2.style.display = "none";
+        idDica5.style.display = "none";
+        idDica6.style.display = "none";
+        idDica7.style.display = "none";
+        idDica8.style.display = "none";
+        idDica9.style.display = "none";
+        idDica10.style.display = "none";
+        idDica11.style.display = "none";
+        idDica12.style.display = "none";
+        idDica13.style.display = "none";
+        idDica14.style.display = "none";
+        idDica15.style.display = "none";
+        idDica16.style.display = "none";
+        idDica17.style.display = "none";
+    }
+    function div5(){
+        idDica5.style.display = "block";
+        idDica1.style.display = "none";
+        idDica3.style.display = "none";
+        idDica4.style.display = "none";
+        idDica2.style.display = "none";
+        idDica6.style.display = "none";
+        idDica7.style.display = "none";
+        idDica8.style.display = "none";
+        idDica9.style.display = "none";
+        idDica10.style.display = "none";
+        idDica11.style.display = "none";
+        idDica12.style.display = "none";
+        idDica13.style.display = "none";
+        idDica14.style.display = "none";
+        idDica15.style.display = "none";
+        idDica16.style.display = "none";
+        idDica17.style.display = "none";
+    }
+    function div6(){
+        idDica6.style.display = "block";
+        idDica1.style.display = "none";
+        idDica3.style.display = "none";
+        idDica4.style.display = "none";
+        idDica5.style.display = "none";
+        idDica2.style.display = "none";
+        idDica7.style.display = "none";
+        idDica8.style.display = "none";
+        idDica9.style.display = "none";
+        idDica10.style.display = "none";
+        idDica11.style.display = "none";
+        idDica12.style.display = "none";
+        idDica13.style.display = "none";
+        idDica14.style.display = "none";
+        idDica15.style.display = "none";
+        idDica16.style.display = "none";
+        idDica17.style.display = "none";
+    }
+    function div7(){
+        idDica7.style.display = "block";
+        idDica1.style.display = "none";
+        idDica3.style.display = "none";
+        idDica4.style.display = "none";
+        idDica5.style.display = "none";
+        idDica6.style.display = "none";
+        idDica2.style.display = "none";
+        idDica8.style.display = "none";
+        idDica9.style.display = "none";
+        idDica10.style.display = "none";
+        idDica11.style.display = "none";
+        idDica12.style.display = "none";
+        idDica13.style.display = "none";
+        idDica14.style.display = "none";
+        idDica15.style.display = "none";
+        idDica16.style.display = "none";
+        idDica17.style.display = "none";
+    }
+    function div8(){
+        idDica8.style.display = "block";
+        idDica1.style.display = "none";
+        idDica3.style.display = "none";
+        idDica4.style.display = "none";
+        idDica5.style.display = "none";
+        idDica6.style.display = "none";
+        idDica7.style.display = "none";
+        idDica2.style.display = "none";
+        idDica9.style.display = "none";
+        idDica10.style.display = "none";
+        idDica11.style.display = "none";
+        idDica12.style.display = "none";
+        idDica13.style.display = "none";
+        idDica14.style.display = "none";
+        idDica15.style.display = "none";
+        idDica16.style.display = "none";
+        idDica17.style.display = "none";
+    }
+    function div9(){
+        idDica9.style.display = "block";
+        idDica1.style.display = "none";
+        idDica3.style.display = "none";
+        idDica4.style.display = "none";
+        idDica5.style.display = "none";
+        idDica6.style.display = "none";
+        idDica7.style.display = "none";
+        idDica8.style.display = "none";
+        idDica2.style.display = "none";
+        idDica10.style.display = "none";
+        idDica11.style.display = "none";
+        idDica12.style.display = "none";
+        idDica13.style.display = "none";
+        idDica14.style.display = "none";
+        idDica15.style.display = "none";
+        idDica16.style.display = "none";
+        idDica17.style.display = "none";
+    }
+    function div10(){
+        idDica10.style.display = "block";
+        idDica1.style.display = "none";
+        idDica3.style.display = "none";
+        idDica4.style.display = "none";
+        idDica5.style.display = "none";
+        idDica6.style.display = "none";
+        idDica7.style.display = "none";
+        idDica8.style.display = "none";
+        idDica9.style.display = "none";
+        idDica2.style.display = "none";
+        idDica11.style.display = "none";
+        idDica12.style.display = "none";
+        idDica13.style.display = "none";
+        idDica14.style.display = "none";
+        idDica15.style.display = "none";
+        idDica16.style.display = "none";
+        idDica17.style.display = "none";
+    }
+    function div11(){
+        idDica11.style.display = "block";
+        idDica1.style.display = "none";
+        idDica3.style.display = "none";
+        idDica4.style.display = "none";
+        idDica5.style.display = "none";
+        idDica6.style.display = "none";
+        idDica7.style.display = "none";
+        idDica8.style.display = "none";
+        idDica9.style.display = "none";
+        idDica10.style.display = "none";
+        idDica2.style.display = "none";
+        idDica12.style.display = "none";
+        idDica13.style.display = "none";
+        idDica14.style.display = "none";
+        idDica15.style.display = "none";
+        idDica16.style.display = "none";
+        idDica17.style.display = "none";
+    }
+    function div12(){
+        idDica12.style.display = "block";
+        idDica1.style.display = "none";
+        idDica3.style.display = "none";
+        idDica4.style.display = "none";
+        idDica5.style.display = "none";
+        idDica6.style.display = "none";
+        idDica7.style.display = "none";
+        idDica8.style.display = "none";
+        idDica9.style.display = "none";
+        idDica10.style.display = "none";
+        idDica11.style.display = "none";
+        idDica2.style.display = "none";
+        idDica13.style.display = "none";
+        idDica14.style.display = "none";
+        idDica15.style.display = "none";
+        idDica16.style.display = "none";
+        idDica17.style.display = "none";
+    }
+    function div13(){
+        idDica13.style.display = "block";
+        idDica1.style.display = "none";
+        idDica3.style.display = "none";
+        idDica4.style.display = "none";
+        idDica5.style.display = "none";
+        idDica6.style.display = "none";
+        idDica7.style.display = "none";
+        idDica8.style.display = "none";
+        idDica9.style.display = "none";
+        idDica10.style.display = "none";
+        idDica11.style.display = "none";
+        idDica12.style.display = "none";
+        idDica2.style.display = "none";
+        idDica14.style.display = "none";
+        idDica15.style.display = "none";
+        idDica16.style.display = "none";
+        idDica17.style.display = "none";
+    }
+    function div14(){
+        idDica14.style.display = "block";
+        idDica1.style.display = "none";
+        idDica3.style.display = "none";
+        idDica4.style.display = "none";
+        idDica5.style.display = "none";
+        idDica6.style.display = "none";
+        idDica7.style.display = "none";
+        idDica8.style.display = "none";
+        idDica9.style.display = "none";
+        idDica10.style.display = "none";
+        idDica11.style.display = "none";
+        idDica12.style.display = "none";
+        idDica13.style.display = "none";
+        idDica2.style.display = "none";
+        idDica15.style.display = "none";
+        idDica16.style.display = "none";
+        idDica17.style.display = "none";
+    }
+    function div15(){
+        idDica15.style.display = "block";
+        idDica1.style.display = "none";
+        idDica3.style.display = "none";
+        idDica4.style.display = "none";
+        idDica5.style.display = "none";
+        idDica6.style.display = "none";
+        idDica7.style.display = "none";
+        idDica8.style.display = "none";
+        idDica9.style.display = "none";
+        idDica10.style.display = "none";
+        idDica11.style.display = "none";
+        idDica12.style.display = "none";
+        idDica13.style.display = "none";
+        idDica14.style.display = "none";
+        idDica2.style.display = "none";
+        idDica16.style.display = "none";
+        idDica17.style.display = "none";
+    }
+    function div16(){
+        idDica16.style.display = "block";
+        idDica1.style.display = "none";
+        idDica3.style.display = "none";
+        idDica4.style.display = "none";
+        idDica5.style.display = "none";
+        idDica6.style.display = "none";
+        idDica7.style.display = "none";
+        idDica8.style.display = "none";
+        idDica9.style.display = "none";
+        idDica10.style.display = "none";
+        idDica11.style.display = "none";
+        idDica12.style.display = "none";
+        idDica13.style.display = "none";
+        idDica14.style.display = "none";
+        idDica15.style.display = "none";
+        idDica2.style.display = "none";
+        idDica17.style.display = "none";
+    }
+    function div17(){
+        idDica17.style.display = "block";
+        idDica1.style.display = "none";
+        idDica3.style.display = "none";
+        idDica4.style.display = "none";
+        idDica5.style.display = "none";
+        idDica6.style.display = "none";
+        idDica7.style.display = "none";
+        idDica8.style.display = "none";
+        idDica9.style.display = "none";
+        idDica10.style.display = "none";
+        idDica11.style.display = "none";
+        idDica12.style.display = "none";
+        idDica13.style.display = "none";
+        idDica14.style.display = "none";
+        idDica15.style.display = "none";
+        idDica16.style.display = "none";
+        idDica2.style.display = "none";
+    }
+</script>
