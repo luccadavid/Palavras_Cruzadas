@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-body{
+* ::selection {
+    background-color: rgb(100, 100, 100);
+}
+
+
+body {
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -35,110 +40,98 @@ body{
 
 .dica1 {
     position: absolute;
-    margin-top: 7rem;
+    margin-top: 5.5rem;
     font-size: 20px;
 }
 
 .dica2 {
     position: absolute;
-    margin-top: 7rem;
+    margin-top: 5.5rem;
     font-size: 20px;
 }
 
 .dica3 {
     position: absolute;
-    margin-top: 7rem;
+    margin-top: 5.5rem;
     font-size: 20px;
 }
 
 .dica4 {
     position: absolute;
-    margin-top: 7rem;
+    margin-top: 5.5rem;
     font-size: 20px;
 }
 
 .dica5 {
     position: absolute;
-    margin-top: 7rem;
+    margin-top: 5.5rem;
     font-size: 20px;
 }
 
 .dica6 {
     position: absolute;
-    margin-top: 7rem;
+    margin-top: 5.5rem;
     font-size: 20px;
 }
 
 .dica7 {
     position: absolute;
-    margin-top: 7rem;
+    margin-top: 5.5rem;
     font-size: 20px;
 }
 
 .dica8 {
     position: absolute;
-    margin-top: 7rem;
+    margin-top: 5.5rem;
     font-size: 20px;
 }
 
 .dica9 {
     position: absolute;
-    margin-top: 7rem;
+    margin-top: 5.5rem;
     font-size: 20px;
 }
 
 .dica10 {
     position: absolute;
-    margin-top: 7rem;
+    margin-top: 5.5rem;
     font-size: 20px;
 }
 
 .dica11 {
     position: absolute;
-    margin-top: 7rem;
+    margin-top: 5.5rem;
     font-size: 20px;
 }
 
 .dica12 {
     position: absolute;
-    margin-top: 7rem;
+    margin-top: 5.5rem;
     font-size: 20px;
 }
 
 .dica13 {
     position: absolute;
-    margin-top: 7rem;
+    margin-top: 5.5rem;
     font-size: 20px;
 }
 
 .dica14 {
     position: absolute;
-    margin-top: 7rem;
+    margin-top: 5.5rem;
     font-size: 20px;
 }
 
 .dica15 {
     position: absolute;
-    margin-top: 7rem;
-    font-size: 20px;
-}
-
-.dica16 {
-    position: absolute;
-    margin-top: 7rem;
-    font-size: 20px;
-}
-
-.dica17 {
-    position: absolute;
-    margin-top: 7rem;
+    margin-top: 5.5rem;
     font-size: 20px;
 }
 
 .botoes {
     position: absolute;
     margin-left: 1.5rem;
-    margin-top: 37.8rem;
+    margin-top: 37rem;
 }
 
 .botoes button {
@@ -195,7 +188,7 @@ input:disabled {
 .foo { 
     writing-mode: vertical-rl; 
     position: absolute;
-    margin-left: 78rem;
+    margin-left: 79rem;
     margin-top: 11rem;
     text-align: center;
     text-shadow:   5px 0px 12px rgb(0, 0, 0);
